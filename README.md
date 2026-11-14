@@ -1,6 +1,6 @@
-# Copywriting Portfolio — Abdullah Albariqi
+# Marketing Portfolio — Abdullah Albariqi
 
-Freelance ad copywriter and content writer. I write ad scripts and short-form content, then run and measure them on TikTok, Meta and Snapchat.
+Performance marketer and copywriter. I run paid campaigns on TikTok, Meta and Snapchat and write the ad scripts and content behind them.
 
 Contact: ipabdullah2@gmail.com
 
