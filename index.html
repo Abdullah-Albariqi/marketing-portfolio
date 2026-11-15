@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عبدالله البارقي | كاتب إعلانات ومسوّق أداء</title>
+<meta name="description" content="عبدالله البارقي: كاتب إعلانات ومسوّق أداء ومهندس ذكاء اصطناعي. سكربت إعلاني خفّض تكلفة الشراء 31%، و37.5 ألف ريال مبيعات على سلة.">
+<meta property="og:title" content="عبدالله البارقي | كاتب إعلانات ومسوّق أداء">
+<meta property="og:description" content="أكتب الإعلان، أشغّل الحملة، وأبني الأداة. أرقام حقيقية من TikTok Ads وسلة.">
+<meta property="og:image" content="img/TikTok_Ads_Campaigns_CPA.jpg">
+<style>
+@font-face{font-family:"Thmanyah Sans";src:url(fonts/thmanyahsans-Regular.otf) format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url(fonts/thmanyahsans-Medium.otf) format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url(fonts/thmanyahsans-Bold.otf) format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"Thmanyah Sans";src:url(fonts/thmanyahsans-Black.otf) format("opentype");font-weight:900;font-display:swap}
+
+:root{
+  --bg:#ffffff; --bg-soft:#f6f6f4; --card:#ffffff;
+  --ink:#0d0d0d; --ink-2:#3d3d3d; --muted:#7a7a7a;
+  --line:#e8e8e4; --line-2:#dcdcd6;
+  --accent:#ff4f12; --accent-soft:#fff1eb; --accent-ink:#c93a06;
+  --green:#12a150; --green-soft:#e9f8ef;
+  --radius:22px; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 30px rgba(0,0,0,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Thmanyah Sans",system-ui,sans-serif;line-height:1.75;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* background grid like the reference, but light */
+.bg-grid{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 30%,transparent 75%);opacity:.6}
+
+/* nav */
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;width:min(760px,calc(100% - 24px));
+  display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 14px;
+  background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;padding-inline-start:4px}
+.brand .mono{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:900;font-size:15px}
+.nav-links{display:flex;gap:4px}
+.nav-links a{padding:6px 12px;border-radius:999px;color:var(--ink-2);font-size:15px}
+.nav-links a:hover{background:var(--bg-soft);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid var(--ink);transition:.2s}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--accent);border-color:var(--accent)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--ink)}
+.nav .btn{padding:8px 16px}
+
+/* hero */
+.hero{padding:150px 0 40px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--green-soft);color:#0b6b36;font-size:14px;font-weight:500;border:1px solid #cdeedb}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(18,161,80,.18);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(18,161,80,.05)}}
+.hero h1{font-size:clamp(40px,7vw,84px);line-height:1.12;font-weight:900;letter-spacing:-.5px;margin:22px 0 10px}
+.hero h1 .roles{display:block;font-size:.62em;font-weight:700;color:var(--ink-2);margin-top:10px}
+.hero h1 .roles em{font-style:normal;color:var(--accent)}
+.hero h1 .sep{color:var(--line-2);margin:0 .25em;font-weight:400}
+.lead{font-size:clamp(18px,2.2vw,22px);color:var(--ink-2);max-width:760px}
+.sub{color:var(--muted);margin-top:10px;max-width:720px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:54px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:clamp(28px,3.4vw,40px);font-weight:900;line-height:1.1;direction:ltr;text-align:right}
+.stat b small{font-size:.5em;font-weight:700;color:var(--muted)}
+.stat span{display:block;color:var(--muted);font-size:14.5px;margin-top:6px;line-height:1.5}
+.stat.hl{background:var(--ink);color:#fff;border-color:var(--ink)}
+.stat.hl span{color:#bdbdbd}
+.stat.hl b{color:#fff}
+.stat.hl b i{font-style:normal;color:var(--accent)}
+
+/* sections */
+section.wrap{padding-top:110px;padding-bottom:10px;scroll-margin-top:0}
+.feature .body > .badge,.pcard .body > .badge{align-self:flex-start}
+.eyebrow{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:700;text-transform:uppercase;direction:ltr;text-align:right}
+.h2{font-size:clamp(32px,4.6vw,52px);font-weight:900;line-height:1.2;margin:6px 0 12px}
+.h2-sub{color:var(--ink-2);max-width:760px;font-size:18px}
+.role-tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin-bottom:10px}
+.role-tag i{font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-size:12px}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-size:13px;padding:3px 11px;border-radius:999px;background:var(--bg-soft);border:1px solid var(--line);color:var(--ink-2)}
+.tag.a{background:var(--accent-soft);border-color:#ffd9c9;color:var(--accent-ink)}
+.badge{display:inline-block;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--accent);color:#fff}
+.badge.g{background:var(--green)}
+.badge.k{background:var(--ink)}
+.badge.m{background:var(--bg-soft);color:var(--ink-2);border:1px solid var(--line)}
+
+/* screenshot frame */
+.shot{position:relative;background:var(--bg-soft);border-bottom:1px solid var(--line);cursor:zoom-in}
+.shot .bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:#fafaf8;direction:ltr}
+.shot .bar i{width:10px;height:10px;border-radius:50%;background:#e2e2dc}
+.shot .bar i:first-child{background:#ff6b5b}.shot .bar i:nth-child(2){background:#ffc23d}.shot .bar i:nth-child(3){background:#2ecb6b}
+.shot img{width:100%}
+.shot .zoom{position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,.78);color:#fff;font-size:12.5px;padding:4px 10px;border-radius:999px;opacity:0;transition:.2s}
+.shot:hover .zoom{opacity:1}
+.cap{font-size:14px;color:var(--muted);padding:12px 18px}
+
+/* case study */
+.case{display:grid;grid-template-columns:1.25fr 1fr;gap:0;margin-top:36px}
+.case .body{padding:30px}
+.case .body h3{font-size:28px;font-weight:900;line-height:1.3;margin:10px 0}
+.case .shot{border-bottom:0;border-inline-start:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.kpi{border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.kpi b{display:block;font-size:24px;font-weight:900;direction:ltr;text-align:right}
+.kpi b.up{color:var(--green)}
+.kpi span{font-size:13px;color:var(--muted);line-height:1.4;display:block}
+.compare{margin-top:6px}
+.bar-row{display:grid;grid-template-columns:120px 1fr 80px;align-items:center;gap:10px;font-size:14px;margin:8px 0}
+.bar-row .track{height:12px;background:var(--bg-soft);border-radius:99px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:99px;background:var(--line-2)}
+.bar-row.me .fill{background:var(--accent)}
+.bar-row b{direction:ltr;text-align:left;font-weight:700}
+
+/* hooks wall */
+.hooks-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px;margin-top:60px}
+.hooks-head h3{font-size:28px;font-weight:900}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-2);background:#fff;cursor:pointer;color:var(--ink-2)}
+.filters button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.hooks{columns:3 280px;column-gap:12px;margin-top:20px}
+.hook{break-inside:avoid;margin-bottom:12px;border:1px solid var(--line);border-radius:18px;padding:18px 18px 14px;background:#fff;transition:.2s}
+.hook:hover{border-color:var(--ink);transform:translateY(-2px)}
+.hook p{font-size:19px;font-weight:700;line-height:1.55}
+.hook small{display:flex;justify-content:space-between;margin-top:10px;color:var(--muted);font-size:13px}
+.hook small b{color:var(--accent-ink);font-weight:500}
+.hook.hide{display:none}
+
+/* script anatomy */
+.anatomy{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;margin-top:60px}
+.anatomy .card{padding:28px}
+.anatomy h3{font-size:26px;font-weight:900;margin-bottom:6px}
+.steps{list-style:none;margin-top:16px;counter-reset:s}
+.steps li{position:relative;padding:12px 52px 12px 0;border-top:1px dashed var(--line-2)}
+.steps li:first-child{border-top:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;right:0;top:12px;width:34px;height:34px;border-radius:10px;background:var(--bg-soft);border:1px solid var(--line);display:grid;place-items:center;font-weight:900}
+.steps li b{display:block}
+.steps li span{color:var(--muted);font-size:15px}
+.script{background:var(--ink)!important;color:#f2f2f2;border-color:var(--ink)!important}
+.script .meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 18px}
+.script .meta .tag{background:#1f1f1f;border-color:#333;color:#cfcfcf}
+.line{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:12px 0;border-top:1px solid #262626}
+.line:first-of-type{border-top:0}
+.line .t{font-size:12.5px;color:var(--accent);font-weight:700;direction:ltr;text-align:right;padding-top:3px}
+.line .t small{display:block;color:#8a8a8a;font-weight:500;direction:rtl}
+.line p{font-size:17px;line-height:1.7}
+.line p .v{display:block;color:#8a8a8a;font-size:14px;margin-top:4px}
+.note{font-size:13.5px;color:#9a9a9a;margin-top:14px;border-top:1px solid #262626;padding-top:12px}
+
+/* grid generic */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.pcard .body{padding:22px 24px 24px}
+.pcard h3{font-size:24px;font-weight:900;line-height:1.3;margin:8px 0 6px}
+.pcard h3 .en{font-size:15px;color:var(--muted);font-weight:500;margin-inline-start:6px}
+.pcard p{color:var(--ink-2);font-size:16px}
+.pcard .result{margin-top:12px;padding:12px 14px;border-radius:14px;background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:15.5px;line-height:1.6}
+.pcard .result.g{background:var(--green-soft);color:#0b6b36}
+.pcard ul{margin:10px 0 0;padding-inline-start:18px;color:var(--ink-2);font-size:15.5px}
+.pcard ul li{margin:3px 0}
+.pcard .flow{font-size:13px;color:var(--muted);direction:ltr;text-align:right;margin-bottom:2px;letter-spacing:.3px}
+.span2{grid-column:span 2}
+.feature{display:grid;grid-template-columns:1.3fr 1fr}
+.feature .shot{border-bottom:0;border-inline-end:1px solid var(--line)}
+.feature .body{display:flex;flex-direction:column;justify-content:center}
+
+/* process */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.process .p{border:1px solid var(--line);border-radius:18px;padding:18px;background:#fff;position:relative}
+.process .p b{display:block;font-size:18px;margin:6px 0 2px}
+.process .p span{color:var(--muted);font-size:14.5px;line-height:1.6;display:block}
+.process .p .n{font-size:13px;color:var(--accent);font-weight:700;direction:ltr;text-align:right}
+
+/* fit table */
+.fit{margin-top:36px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.fit-row{display:grid;grid-template-columns:1fr 1.6fr;border-top:1px solid var(--line)}
+.fit-row:first-child{border-top:0}
+.fit-row > div{padding:18px 22px}
+.fit-row .need{background:var(--bg-soft);font-weight:700;border-inline-end:1px solid var(--line)}
+.fit-row .need small{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.fit-row .proof{color:var(--ink-2);font-size:16px}
+.fit-row .proof a{color:var(--accent-ink);font-weight:700;border-bottom:1px solid #ffd2bf}
+.fit-head{background:var(--ink);color:#fff;font-weight:700}
+.fit-head > div{background:var(--ink)!important;color:#fff!important;border-color:#2a2a2a!important}
+
+.ideas{counter-reset:i;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+.idea{border:1px solid var(--line);border-radius:18px;padding:18px 20px;background:#fff}
+.idea .fmt{font-size:12.5px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);padding:2px 10px;border-radius:99px;display:inline-block}
+.idea b{display:block;font-size:19px;margin:8px 0 4px;line-height:1.5}
+.idea span{color:var(--muted);font-size:15px;line-height:1.65;display:block}
+
+/* about / skills */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:36px}
+.about .card{padding:28px}
+.about p{color:var(--ink-2);margin-bottom:12px}
+.edu{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0;border-top:1px solid var(--line)}
+.edu b{font-weight:700}.edu span{color:var(--muted);font-size:15px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{font:inherit;font-size:14.5px;padding:7px 16px;border-radius:999px;border:1px solid var(--line-2);background:#fff;cursor:pointer}
+.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.panel{display:none}.panel.on{display:block}
+.panel p{color:var(--muted);font-size:15px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:7px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg-soft);font-size:15px;font-weight:500}
+
+/* contact */
+.contact{margin:90px 0 140px;background:var(--ink);color:#fff;border-radius:32px;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
+.contact::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--accent);filter:blur(120px);opacity:.28;top:-200px;left:-120px}
+.contact h2{font-size:clamp(30px,5vw,54px);font-weight:900;line-height:1.2;position:relative}
+.contact p{color:#bdbdbd;max-width:620px;margin:12px auto 26px;position:relative}
+.contact .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;position:relative}
+.contact .btn-dark{background:#fff;color:var(--ink);border-color:#fff}
+.contact .btn-dark:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.contact .btn-ghost{background:transparent;color:#fff;border-color:#444}
+
+/* dock */
+.dock{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:4px;padding:6px;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow)}
+.dock a,.dock button{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:var(--ink-2);border:0;background:none;cursor:pointer;position:relative}
+.dock a:hover,.dock button:hover{background:var(--bg-soft);color:var(--ink)}
+.dock svg{width:20px;height:20px}
+.dock .tip{position:absolute;bottom:52px;background:var(--ink);color:#fff;font-size:12.5px;padding:3px 10px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:.15s}
+.dock a:hover .tip,.dock button:hover .tip{opacity:1}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--ink);color:#fff;padding:8px 16px;border-radius:999px;font-size:14px;opacity:0;transition:.2s;z-index:60}
+.toast.show{opacity:1;transform:translateX(-50%)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.88);z-index:100;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-height:88vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lb p{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#ddd;font-size:14px;padding:0 20px}
+
+footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.dot{animation:none}html{scroll-behavior:auto}}
+
+@media (max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .case,.anatomy,.about,.feature{grid-template-columns:1fr}
+  .case .shot{border-inline-start:0;border-top:1px solid var(--line)}
+  .feature .shot{border-inline-end:0;border-bottom:1px solid var(--line)}
+  .grid3{grid-template-columns:1fr 1fr}
+  .process{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .hero{padding-top:120px}
+  .grid2,.grid3,.ideas{grid-template-columns:1fr}
+  .span2{grid-column:auto}
+  .kpis{grid-template-columns:1fr 1fr 1fr}
+  .kpi b{font-size:19px}
+  .case .body,.anatomy .card,.about .card{padding:22px}
+  .fit-row{grid-template-columns:1fr}
+  .fit-row .need{border-inline-end:0;border-bottom:1px solid var(--line)}
+  .fit-head .proof{display:none}
+  .line{grid-template-columns:64px 1fr}
+  .bar-row{grid-template-columns:96px 1fr 64px;font-size:13px}
+  .contact{padding:40px 22px}
+  .stat{padding:16px}
+}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+
+<nav class="nav">
+  <a href="#top" class="brand"><span class="mono">ع</span><span>عبدالله البارقي</span></a>
+  <div class="nav-links">
+    <a href="#copy">الكتابة</a>
+    <a href="#performance">الأداء</a>
+    <a href="#ai">الذكاء الاصطناعي</a>
+    <a href="#fit">لفريقكم</a>
+  </div>
+  <a href="mailto:ipabdullah2@gmail.com" class="btn btn-dark">تواصل معي</a>
+</nav>
+
+<main id="top">
+<!-- ============ HERO ============ -->
+<header class="hero wrap">
+  <span class="pill"><span class="dot"></span> متاح للتدريب التعاوني والوظائف في التسويق وصناعة المحتوى</span>
+  <h1>أنا عبدالله البارقي
+    <span class="roles"><em>كاتب إعلانات</em> ومسوّق أداء <span class="sep">/</span> مهندس ذكاء اصطناعي</span>
+  </h1>
+  <p class="lead">أكتب الإعلان، وأطلق الحملة، وأقيس النتيجة، ثم أبني الأداة التي تجعل الدورة القادمة أسرع.</p>
+  <p class="sub">طالب علوم حاسب في جامعة أم القرى. أكتب باللهجة السعودية لجمهور تيك توك وسناب وريلز، وأدير الحملات المدفوعة بنفسي، وأبني منتجات حقيقية بالذكاء الاصطناعي وأسوّقها بالمحتوى.</p>
+  <div class="ctas">
+    <a href="#copy" class="btn btn-dark">شاهد أعمالي ←</a>
+    <a href="#fit" class="btn btn-ghost">ماذا أقدّم لفريق المحتوى</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat hl rv"><b><i>−31%</i></b><span>تكلفة الشراء في الحملة المبنية على سكربتي مقارنة بمتوسط الحساب</span></div>
+    <div class="stat rv"><b>37.5K <small>SAR</small></b><span>مبيعات متجر منتجات رقمية على سلة خلال سنة</span></div>
+    <div class="stat rv"><b>1M+</b><span>ظهور على TikTok Ads بنسبة نقر <span class="ltr">3.22%</span></span></div>
+    <div class="stat rv"><b>240</b><span>تسجيلاً في يومين من محتوى عضوي فقط بدون ريال إعلانات</span></div>
+  </div>
+</header>
+
+<!-- ============ COPY ============ -->
+<section id="copy" class="wrap">
+  <span class="role-tag"><i>1</i> كاتب إعلانات</span>
+  <p class="eyebrow">Copywriting</p>
+  <h2 class="h2">الكلمة هي أرخص طريقة لتخفيض تكلفة الإعلان</h2>
+  <p class="h2-sub">نفس المنتج، نفس الميزانية، نفس المنصة. الفرق الوحيد كان النص. هذه أعمال كتبتها لبراند منتجات رقمية سعودي (الاسم مخفي احتراماً للسرية)، والأرقام مأخوذة مباشرة من TikTok Ads Manager.</p>
+
+  <!-- case study -->
+  <article class="card case rv">
+    <div class="body">
+      <span class="badge">دراسة حالة</span>
+      <h3>سكربت واحد جاب 43% من كل مشتريات الحساب</h3>
+      <p style="color:var(--ink-2)">من بين 8 حملات على تيك توك، الحملة المبنية على سكربتي <span class="ltr">"SALES ads script"</span> كانت الأعلى نقراً والأرخص تكلفة شراء.</p>
+      <div class="kpis">
+        <div class="kpi"><b class="up">3.88%</b><span>CTR، الأعلى في الحساب</span></div>
+        <div class="kpi"><b>23.48</b><span>ريال تكلفة الشراء</span></div>
+        <div class="kpi"><b>67/155</b><span>مشترى من إجمالي الحساب</span></div>
+      </div>
+      <div class="compare">
+        <div class="bar-row me"><span>سكربتي</span><div class="track"><div class="fill" style="width:30%"></div></div><b>23.48 SAR</b></div>
+        <div class="bar-row"><span>متوسط الحساب</span><div class="track"><div class="fill" style="width:43%"></div></div><b>33.85 SAR</b></div>
+        <div class="bar-row"><span>أغلى حملة</span><div class="track"><div class="fill" style="width:100%"></div></div><b>78.12 SAR</b></div>
+        <p style="font-size:13px;color:var(--muted);margin-top:6px">تكلفة الشراء (Cost per conversion). كل ما قصر الشريط كان أفضل.</p>
+      </div>
+    </div>
+    <figure class="shot" data-cap="TikTok Ads Manager: حملة SALES ads script بتكلفة شراء 23.48 ريال و CTR 3.88%">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <img src="img/TikTok_Ads_Campaigns_CPA.jpg" alt="لقطة من TikTok Ads Manager تظهر تكلفة الشراء لكل حملة" loading="lazy">
+      <span class="zoom">اضغط للتكبير</span>
+    </figure>
+  </article>
+
+  <!-- process -->
+  <div class="process">
+    <div class="p rv"><span class="n">01 / Research</span><b>أدرس المنافس</b><span>أجمع أكثر فيديوهات المنافسين مشاهدة في أداة بنيتها بنفسي، وأفرّغها وأحلّل بنيتها.</span></div>
+    <div class="p rv"><span class="n">02 / Hook</span><b>أكتب 10 هوكات</b><span>أكتب عدة افتتاحيات لكل فكرة: ألم، فضول، تحوّل، أرقام، كسر قناعة.</span></div>
+    <div class="p rv"><span class="n">03 / Script</span><b>أبني السكربت</b><span>هوك ← مشكلة ← حل ← دليل ← دعوة واضحة. لهجة سعودية وجمل قصيرة تُقرأ على الشاشة.</span></div>
+    <div class="p rv"><span class="n">04 / Test</span><b>أختبر وأقيس</b><span>أطلق النسخ وأقارن CTR وتكلفة الشراء، وأعيد كتابة ما لا يعمل.</span></div>
+  </div>
+
+  <!-- hooks wall -->
+  <div class="hooks-head">
+    <div>
+      <h3>جدار الهوكات</h3>
+      <p style="color:var(--muted)">من أكثر من 75 عنوان كاروسيل وريلز كتبتها لسلسلتين محتوى (القلق الاجتماعي، والانضباط والإنتاجية). صنّفتها حسب المعادلة.</p>
+    </div>
+    <div class="filters" id="hookFilters">
+      <button class="on" data-f="all">الكل</button>
+      <button data-f="pain">ألم مباشر</button>
+      <button data-f="curio">فضول وسر</button>
+      <button data-f="trans">تحوّل</button>
+      <button data-f="myth">كسر قناعة</button>
+      <button data-f="list">قائمة وخطوات</button>
+    </div>
+  </div>
+  <div class="hooks" id="hooks">
+    <div class="hook" data-k="pain"><p>تحس لو دخلت القاعة الكل يطالع فيك وينتقدك؟</p><small><span>كاروسيل</span><b>ألم مباشر</b></small></div>
+    <div class="hook" data-k="myth"><p>التسويف مو كسل، أنت بس تهرب من ضغط البداية!</p><small><span>كاروسيل</span><b>كسر قناعة</b></small></div>
+    <div class="hook" data-k="curio"><p>من يتكلم بطلاقة ليس أفضل منك.. هو فقط يعرف هذا السر:</p><small><span>كاروسيل</span><b>فضول وسر</b></small></div>
+    <div class="hook" data-k="trans"><p>كيف تحولت من شخص عنده رهاب اجتماعي.. إلى شخص مرتاح اجتماعياً؟</p><small><span>قصة شخصية</span><b>تحوّل</b></small></div>
+    <div class="hook" data-k="curio"><p>أشياء سببت لك الرهاب الاجتماعي وأنت ما تدري:</p><small><span>كاروسيل</span><b>فضول وسر</b></small></div>
+    <div class="hook" data-k="myth"><p>الانضباط هو اللي يحركك وليس التحفيز!</p><small><span>كاروسيل</span><b>كسر قناعة</b></small></div>
+    <div class="hook" data-k="pain"><p>ليش يضيع يومك على الجوال وأنت تبي تنجز؟</p><small><span>ريلز</span><b>ألم مباشر</b></small></div>
+    <div class="hook" data-k="list"><p>قاعدة الـ 1%: السر اللي يغير حياتك بالاستمرار</p><small><span>كاروسيل</span><b>قائمة وخطوات</b></small></div>
+    <div class="hook" data-k="trans"><p>قعدت سنين أجرب حلول، وهذا الشيء الوحيد اللي فادني مع رجفة اليد والقلق الاجتماعي.</p><small><span>قصة شخصية</span><b>تحوّل</b></small></div>
+    <div class="hook" data-k="curio"><p>كيف تستعيد تركيزك من "سجن الخوارزمية"؟</p><small><span>ريلز</span><b>فضول وسر</b></small></div>
+    <div class="hook" data-k="myth"><p>وقف كذب على نفسك بكلمة "أنتظر الوقت المناسب"!</p><small><span>كاروسيل</span><b>كسر قناعة</b></small></div>
+    <div class="hook" data-k="list"><p>إذا سويت هالشي لأسبوع.. رهابك الاجتماعي يخف بشكل كبييير!</p><small><span>تحدي</span><b>قائمة وخطوات</b></small></div>
+    <div class="hook" data-k="pain"><p>ليش تتحمس للشغل في الليل ويتغير كل شي بالصبح؟</p><small><span>ريلز</span><b>ألم مباشر</b></small></div>
+    <div class="hook" data-k="curio"><p>وش هو "وهم الانشغال"؟ وهل أنت جالس تضيع عمرك فيه وأنت ما تدري؟</p><small><span>كاروسيل</span><b>فضول وسر</b></small></div>
+    <div class="hook" data-k="myth"><p>سويت هالتمرين عشان أثبت إن الرهاب الاجتماعي ماله دخل بضعف الشخصية.</p><small><span>تجربة</span><b>كسر قناعة</b></small></div>
+    <div class="hook" data-k="list"><p>لا تروح لأي اجتماع قبل ما تتعلم هالحركة البسيطة في الذكاء الاجتماعي.</p><small><span>ريلز</span><b>قائمة وخطوات</b></small></div>
+    <div class="hook" data-k="trans"><p>كيف تتحول من شخص يتوتر من أبسط موقف.. إلى شخص هادئ وواثق؟</p><small><span>كاروسيل</span><b>تحوّل</b></small></div>
+    <div class="hook" data-k="list"><p>قاعدة اليومين: هي اللي بتحافظ على استمراريتك</p><small><span>كاروسيل</span><b>قائمة وخطوات</b></small></div>
+  </div>
+
+  <!-- script anatomy -->
+  <div class="anatomy">
+    <div class="card rv">
+      <h3>كيف أبني سكربت إعلان</h3>
+      <p style="color:var(--muted)">نفس الهيكل الذي استخدمته في الحملة الأعلى أداءً، مع تعديله لكل منتج وجمهور.</p>
+      <ol class="steps">
+        <li><b>الهوك (0 إلى 3 ثواني)</b><span>جملة تخلّي المشاهد يوقف التمرير. سؤال يلمس ألمه أو معلومة تكسر توقعه.</span></li>
+        <li><b>المشكلة</b><span>أوصف موقفه بكلماته هو، عشان يحس إن الإعلان يتكلم عنه.</span></li>
+        <li><b>الحل</b><span>المنتج كطريق واضح، مو كقائمة مميزات.</span></li>
+        <li><b>الدليل</b><span>نتيجة، تجربة، أو تفصيلة ملموسة تبني الثقة.</span></li>
+        <li><b>الدعوة</b><span>فعل واحد واضح وسبب للتحرك الآن.</span></li>
+      </ol>
+    </div>
+    <div class="card script rv">
+      <span class="badge">عمل تجريبي لهاش بلس</span>
+      <h3 style="margin-top:10px">سكربت ريلز: معسكرات هاش بلس</h3>
+      <div class="meta"><span class="tag">TikTok / Reels</span><span class="tag">25 ثانية</span><span class="tag">لهجة سعودية</span><span class="tag">جمهور: طلاب وخريجين</span></div>
+      <div class="line"><div class="t">0–3s<small>هوك</small></div><p>كم دورة اشتريتها… وما كملتها؟<span class="v">لقطة: تبويبات دورات مفتوحة في الجوال، كلها واقفة على 12%.</span></p></div>
+      <div class="line"><div class="t">3–9s<small>مشكلة</small></div><p>تتحمس أول يوم، وبعد أسبوع تختفي. مو لأنك كسول، لأنك تتعلم لحالك وبدون أحد يتابعك.</p></div>
+      <div class="line"><div class="t">9–18s<small>حل</small></div><p>في معسكرات هاش بلس تتعلم مع دفعة، بمواعيد ثابتة، ومدرب يتابعك لين تطلع بمشروع حقيقي.<span class="v">لقطات: جلسة حضورية، شاشة مشروع، طالب يعرض شغله.</span></p></div>
+      <div class="line"><div class="t">18–22s<small>دليل</small></div><p>ما تطلع بشهادة بس… تطلع بشي تقدر تعرضه في مقابلتك الجاية.</p></div>
+      <div class="line"><div class="t">22–25s<small>دعوة</small></div><p>المقاعد محدودة. سجّل في المعسكر الجاي من الرابط.</p></div>
+      <p class="note">عمل تجريبي كتبته لهذا التقديم، غير منشور. أعطوني منتجاً واحداً وسأكتب له 10 هوكات بديلة في يوم.</p>
+    </div>
+  </div>
+
+  <div class="card rv" style="margin-top:16px;padding:24px 28px">
+    <h3 style="font-size:22px;font-weight:900;margin-bottom:8px">ماذا أكتب</h3>
+    <div class="chips">
+      <span class="chip">سكربتات إعلانات تيك توك وسناب وريلز</span>
+      <span class="chip">هوكات وعناوين كاروسيل</span>
+      <span class="chip">وصف منتجات ونصوص متاجر سلة</span>
+      <span class="chip">صفحات هبوط</span>
+      <span class="chip">كابشنات ومحتوى شهري</span>
+      <span class="chip">إعادة كتابة الإعلانات المرفوضة أو الضعيفة</span>
+      <span class="chip">نصوص عربية وإنجليزية</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERFORMANCE ============ -->
+<section id="performance" class="wrap">
+  <span class="role-tag"><i>2</i> مسوّق أداء</span>
+  <p class="eyebrow">Performance Marketing</p>
+  <h2 class="h2">أطلق الحملة، وأتابع كل ريال</h2>
+  <p class="h2-sub">أدير الحملات على TikTok و Meta و Snapchat بنفسي: الاستهداف، الميزانية، الاختبار، وقراءة الأرقام. كل لقطة هنا من الحساب الحقيقي.</p>
+
+  <div class="grid2">
+    <article class="card pcard rv">
+      <figure class="shot" data-cap="سلة: إجمالي المبيعات 37.5 ألف ريال، نوفمبر 2025 إلى نوفمبر 2026">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/Salla_Sales_Summary.jpg" alt="ملخص مبيعات سلة" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="body">
+        <span class="badge g">سلة</span>
+        <h3>37.5 ألف ريال مبيعات <span class="en ltr">Salla</span></h3>
+        <p>متجر منتجات رقمية بدون تمويل، نما من إعلانات تيك توك المدفوعة والمحتوى العضوي. صافي المبيعات 35.6 ألف ريال.</p>
+      </div>
+    </article>
+    <article class="card pcard rv">
+      <figure class="shot" data-cap="TikTok Ads Manager: الصرف، الظهور ونسبة النقر لكل الحملات">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/TikTok_Ads_Campaigns_Spend.jpg" alt="لقطة من TikTok Ads تظهر الصرف والظهور" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="body">
+        <span class="badge k">TikTok Ads</span>
+        <h3>مليون ظهور بـ 5.2 ألف ريال</h3>
+        <p>8 حملات، أكثر من مليون ظهور، 33 ألف نقرة، و155 عملية شراء. متوسط CTR بلغ 3.22%، أعلى من المعتاد لحسابات تيك توك.</p>
+      </div>
+    </article>
+
+    <article class="card pcard feature span2 rv">
+      <figure class="shot" data-cap="AdInspector: لوحة أداء إعلانات لعدة حسابات (بيانات تجريبية)">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/adinspector-dashboard.webp" alt="لوحة AdInspector" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="body">
+        <span class="badge m">أداة بنيتها</span>
+        <h3>AdInspector <span class="en">لوحة أداء الإعلانات</span></h3>
+        <p>بدل التنقل بين مدير إعلانات تيك توك وميتا وسناب، بنيت لوحة واحدة تجمع كل الحسابات والبراندات وتعرض الصرف وتكلفة الشراء جنباً إلى جنب.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Prisma</span><span class="tag">Windsor.ai API</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ORGANIC ============ -->
+<section id="content" class="wrap">
+  <span class="role-tag"><i>+</i> صناعة المحتوى</span>
+  <p class="eyebrow">Organic Content & Launches</p>
+  <h2 class="h2">محتوى جاب عملاء حقيقيين</h2>
+  <p class="h2-sub">أطلقت منتجاتي بنفسي، وكان المحتوى هو قناة النمو الأولى.</p>
+  <div class="grid3">
+    <div class="stat rv"><b>240</b><span>تسجيلاً في جامعتي من يومين محتوى عضوي على تيك توك وسناب، بدون أي صرف إعلاني</span></div>
+    <div class="stat rv"><b>73</b><span>مستخدماً نشطاً أسبوعياً بعد الإطلاق مباشرة</span></div>
+    <div class="stat hl rv"><b><i>25</i></b><span>عميلاً دافعاً لناشر خلال أسبوعين من إعلانات تيك توك</span></div>
+  </div>
+</section>
+
+<!-- ============ AI ============ -->
+<section id="ai" class="wrap">
+  <span class="role-tag"><i>3</i> مهندس ذكاء اصطناعي</span>
+  <p class="eyebrow">AI Engineering</p>
+  <h2 class="h2">أبني الأدوات التي يحتاجها المسوّق</h2>
+  <p class="h2-sub">أبني بمساعدة الذكاء الاصطناعي (Claude Code) منتجات كاملة من قاعدة البيانات إلى النشر، ثم أسوّقها بنفسي. أغلبها خدم التسويق مباشرة.</p>
+
+  <div class="grid2">
+    <article class="card pcard feature span2 rv">
+      <figure class="shot" data-cap="إعلان: جدار فيديوهات المنافسين الأعلى مشاهدة، مع فلاتر حسب المشاهدات والتصنيف">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/e3lan-videos.webp" alt="أداة إعلان: جدار فيديوهات المنافسين" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="body">
+        <p class="flow">competitors → transcribe → analyze → script</p>
+        <span class="badge">للكتابة الإعلانية</span>
+        <h3>إعلان <span class="en">E3lan</span></h3>
+        <p>أداة لدراسة فيديوهات المنافسين الناجحة على تيك توك: تجمع 62 براند و150+ فيديو في مكان واحد، تفرّغ الصوت، تحلّل بنية الإعلان، ثم تكتب سكربتاً جديداً باللهجة السعودية.</p>
+        <div class="tags"><span class="tag a">Claude API</span><span class="tag">Whisper</span><span class="tag">Next.js</span><span class="tag">Postgres</span><span class="tag">ffmpeg</span></div>
+      </div>
+    </article>
+
+    <article class="card pcard rv">
+      <figure class="shot" data-cap="إعلان: لوحة التفاصيل، تشغيل الفيديو، التفريغ والتحليل وكتابة السكربت">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/e3lan-details.webp" alt="لوحة تفاصيل الفيديو في أداة إعلان" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="cap">من الفيديو إلى السكربت: تفريغ، تحليل، وكتابة بدون مغادرة الصفحة.</div>
+    </article>
+    <article class="card pcard rv">
+      <figure class="shot" data-cap="إعلان: صفحة براند منافس مع أعلى فيديوهاته">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/e3lan-brand.webp" alt="صفحة براند في أداة إعلان" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="cap">صفحة لكل منافس: الشعار، المتابعين، المتجر، وأقوى فيديوهاته.</div>
+    </article>
+
+    <article class="card pcard span2 rv">
+      <figure class="shot" data-cap="جامعتي: الصفحة الرئيسية">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/jam3ty-landing.webp" alt="صفحة هبوط جامعتي" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <figure class="shot" data-cap="جامعتي: لوحة الطالب، الخطة الدراسية ومتتبع الغياب (بيانات تجريبية)">
+        <img src="img/jam3ty-screens.webp" alt="شاشات تطبيق جامعتي" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="body">
+        <span class="badge g">منشور ويعمل</span>
+        <h3>جامعتي <span class="en">Jam3ty</span></h3>
+        <p>تطبيق ويب عربي لطلاب جامعة الملك عبدالعزيز: حاسبة معدل، خطط دراسية موثّقة لـ 87 تخصصاً، متتبع حرمان، ومولّد جداول بدون تعارض. الخدمات المدفوعة تُفعّل بأكواد تُشترى من سلة.</p>
+        <div class="result g">240 تسجيلاً و73 مستخدماً نشطاً أسبوعياً من يومين محتوى عضوي، بدون إعلانات.</div>
+        <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Cloudflare Workers</span><span class="tag">PWA</span></div>
+      </div>
+    </article>
+
+    <article class="card pcard rv">
+      <figure class="shot" data-cap="ناشر: التفعيل، تسجيل العميل وحالة الإرسال المباشرة (بيانات تجريبية)">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/nasher-screens.webp" alt="شاشات ناشر" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="body">
+        <p class="flow">Salla order → n8n → WhatsApp → web app</p>
+        <span class="badge m">متوقف بقرار مني</span>
+        <h3>ناشر <span class="en">Nasher</span></h3>
+        <p>منصة لإرسال السير الذاتية لأقسام الموارد البشرية في الشركات السعودية تلقائياً من جيميل العميل.</p>
+        <div class="result">25 عميلاً دافعاً في أسبوعين من إعلانات تيك توك، و17,000+ إيميل مُرسل.</div>
+        <ul><li>أوقفته بنفسي رغم أنه كان يبيع، لأن نتائج المقابلات لم تكن تستحق السعر. منتج يبيع ولا ينفع، ما يستاهل يكبر.</li></ul>
+      </div>
+    </article>
+
+    <article class="card pcard rv">
+      <figure class="shot" data-cap="صاج: الترحيب، مكتبة الوصفات ووضع الطبخ خطوة بخطوة">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/saaj-screens.webp" alt="شاشات تطبيق صاج" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      </figure>
+      <div class="body">
+        <p class="flow">TikTok link → Gemini → structured recipe</p>
+        <span class="badge m">قيد التطوير</span>
+        <h3>صاج <span class="en">Saaj</span></h3>
+        <p>الصق رابط وصفة من تيك توك أو إنستقرام، ويحوّلها الذكاء الاصطناعي إلى وصفة مرتبة بالمقادير والخطوات ووضع طبخ.</p>
+        <div class="tags"><span class="tag a">Gemini API</span><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Supabase</span></div>
+      </div>
+    </article>
+
+    <article class="card pcard span2 rv" style="padding:0">
+      <div class="body">
+        <p class="flow">media → AI caption (brand voice) → TikTok · Instagram · Threads</p>
+        <span class="badge">لإدارة المنصات</span>
+        <h3>Content Scripts <span class="en">نشر المحتوى بالذكاء الاصطناعي</span></h3>
+        <p>ترفع الصور أو الفيديو، فيكتب Claude الكابشن بنبرة كل براند، وتُنشر تلقائياً على تيك توك وإنستقرام وثريدز عبر واجهاتها الرسمية. وفّر عليّ ساعات من النشر اليدوي يومياً لعدة براندات.</p>
+        <div class="tags"><span class="tag a">Claude API</span><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">TikTok Content Posting API</span><span class="tag">Meta Graph API</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FIT ============ -->
+<section id="fit" class="wrap">
+  <p class="eyebrow">Why me</p>
+  <h2 class="h2">ماذا أقدّم لفريق المحتوى</h2>
+  <p class="h2-sub">قارنت مهام صانع المحتوى بما عملته فعلاً. لكل مهمة، دليل من هذه الصفحة.</p>
+
+  <div class="fit rv">
+    <div class="fit-row fit-head"><div class="need">المهمة</div><div class="proof">ما يثبتها</div></div>
+    <div class="fit-row"><div class="need">تطوير الأفكار<small>أفكار للحملات والمحتوى اليومي</small></div><div class="proof">أكثر من 75 عنوان كاروسيل وريلز لسلسلتي محتوى، وأداة <a href="#ai">إعلان</a> لاستخراج الأفكار من أنجح فيديوهات المنافسين.</div></div>
+    <div class="fit-row"><div class="need">كتابة السيناريو والنصوص<small>Copywriting وسكربتات الفيديو</small></div><div class="proof">سكربت إعلاني خفّض تكلفة الشراء 31% وجاب 43% من مشتريات الحساب. <a href="#copy">دراسة الحالة</a></div></div>
+    <div class="fit-row"><div class="need">إنتاج المحتوى القصير<small>Reels و TikTok</small></div><div class="proof">أكتب وأنتج محتوى تيك توك وسناب لمنتجاتي، وأحرّر على CapCut. يومان من المحتوى جابت 240 تسجيلاً.</div></div>
+    <div class="fit-row"><div class="need">إدارة المنصات<small>جدولة ونشر ومتابعة</small></div><div class="proof">بنيت أداة تكتب الكابشن وتنشر على تيك توك وإنستقرام وثريدز تلقائياً لعدة براندات.</div></div>
+    <div class="fit-row"><div class="need">البحث والتحليل<small>الترندات وأدوات التحليل</small></div><div class="proof">أقرأ TikTok Ads Manager وتقارير سلة يومياً، وبنيت <a href="#performance">لوحة أداء</a> تجمع كل الحسابات.</div></div>
+    <div class="fit-row"><div class="need">الكتابة العربية والإنجليزية<small>بأسلوب يناسب كل منصة</small></div><div class="proof">أكتب باللهجة السعودية للإعلانات وبالفصحى لصفحات الهبوط، وكل مشاريعي موثّقة بالإنجليزية على GitHub.</div></div>
+  </div>
+
+  <div style="margin-top:46px">
+    <span class="badge">عمل تجريبي</span>
+    <h3 style="font-size:28px;font-weight:900;margin-top:8px">6 أفكار محتوى جاهزة لهاش بلس</h3>
+    <p style="color:var(--muted)">كتبتها قبل التقديم عشان تشوفون طريقة تفكيري، مو بعد ما أتوظف.</p>
+    <div class="ideas">
+      <div class="idea rv"><span class="fmt">ريلز سلسلة</span><b>"اليوم الأول ضد اليوم الأخير"</b><span>نصوّر طالباً في أول يوم من المعسكر وفي يوم عرض مشروعه. التحوّل نفسه هو الإعلان.</span></div>
+      <div class="idea rv"><span class="fmt">مقابلات الشارع</span><b>"وش المهارة اللي ودك تتعلمها قبل التخرج؟"</b><span>أسئلة سريعة في المدينة المنورة، وكل جواب يربط بدورة أو معسكر مناسب.</span></div>
+      <div class="idea rv"><span class="fmt">كاروسيل</span><b>"3 مهارات تتعلمها قبل نهاية الإجازة وتفرق في سيرتك"</b><span>محتوى قابل للحفظ والمشاركة، ينتهي بدعوة للمعسكر القادم.</span></div>
+      <div class="idea rv"><span class="fmt">تيك توك تعليمي</span><b>"غلطة يسويها كل مبتدئ في البرمجة"</b><span>مقطع 30 ثانية بقيمة حقيقية من محتوى الدورات، يبني الثقة قبل البيع.</span></div>
+      <div class="idea rv"><span class="fmt">مقال SEO</span><b>"كيف تختار أول دورة برمجة لك في 2027"</b><span>مقال يستهدف بحثاً فعلياً على قوقل، ويوجّه القارئ لصفحة الدورات.</span></div>
+      <div class="idea rv"><span class="fmt">خلف الكواليس</span><b>"كيف نجهّز معسكر من الصفر"</b><span>يعرض الفريق والمدربين ويعطي البراند وجهاً إنسانياً.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="wrap">
+  <p class="eyebrow">About</p>
+  <h2 class="h2">من أنا</h2>
+  <div class="about">
+    <div class="card rv">
+      <p>أنا عبدالله، طالب علوم حاسب في جامعة أم القرى بمكة. بدأت بالتسويق من متجر منتجات رقمية على سلة، وتعلمت هناك أن الإعلان الجيد يبدأ من الكلمة قبل الميزانية.</p>
+      <p>بعدها صرت أبني منتجاتي بنفسي بمساعدة الذكاء الاصطناعي، وأطلقها بالمحتوى والإعلانات. هذا خلاني أفهم الطرفين: كيف يُبنى المنتج، وكيف يُباع.</p>
+      <p>أكثر شي يهمني: أرقام صادقة. لهذا أعرض لقطات الحسابات الحقيقية، ولهذا أوقفت منتجاً كان يبيع لأنه لم يكن يفيد عملاءه بما يكفي.</p>
+      <div class="edu"><div><b>بكالوريوس علوم الحاسب</b><br><span>جامعة أم القرى</span></div><div style="text-align:left"><b class="ltr">GPA 3.47 / 4.00</b><br><span>2024 – 2028</span></div></div>
+    </div>
+    <div class="card rv">
+      <div class="tabs" id="skillTabs">
+        <button class="on" data-t="mk">التسويق</button>
+        <button data-t="ct">المحتوى</button>
+        <button data-t="ai">الذكاء الاصطناعي</button>
+        <button data-t="dev">التطوير</button>
+      </div>
+      <div class="panel on" data-p="mk"><p>إطلاق الحملات وقياسها من أول ريال.</p><div class="chips"><span class="chip">TikTok Ads</span><span class="chip">Meta Ads</span><span class="chip">Snapchat Ads</span><span class="chip">Salla</span><span class="chip">A/B Testing</span><span class="chip">Funnels</span></div></div>
+      <div class="panel" data-p="ct"><p>من الفكرة إلى المقطع المنشور.</p><div class="chips"><span class="chip">Copywriting</span><span class="chip">سكربتات الفيديو</span><span class="chip">كاروسيل</span><span class="chip">CapCut</span><span class="chip">اللهجة السعودية</span><span class="chip">English</span></div></div>
+      <div class="panel" data-p="ai"><p>أتمتة الأعمال المتكررة وتسريع الإنتاج.</p><div class="chips"><span class="chip">Claude API</span><span class="chip">Claude Code</span><span class="chip">Gemini API</span><span class="chip">Whisper</span><span class="chip">n8n</span><span class="chip">Prompt Engineering</span></div></div>
+      <div class="panel" data-p="dev"><p>منتجات كاملة من قاعدة البيانات إلى النشر.</p><div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Next.js</span><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Supabase</span><span class="chip">Postgres</span><span class="chip">Cloudflare</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="contact rv" id="contact">
+    <h2>أعطوني منتجاً واحداً،<br>وأعطيكم 10 هوكات في يوم.</h2>
+    <p>متاح للتدريب التعاوني وأدوار التسويق وصناعة المحتوى. أسرع طريقة للتواصل هي الإيميل.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="mailto:ipabdullah2@gmail.com"><span class="ltr">ipabdullah2@gmail.com</span></a>
+      <a class="btn btn-ghost" href="https://github.com/Abdullah-Albariqi" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>© 2026 عبدالله البارقي. كل الأرقام حقيقية ومأخوذة من لوحات التحكم مباشرة.</footer>
+
+<div class="dock" aria-label="روابط سريعة">
+  <button id="copyMail" aria-label="انسخ الإيميل"><span class="tip">انسخ الإيميل</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></button>
+  <a href="https://github.com/Abdullah-Albariqi" target="_blank" rel="noopener" aria-label="GitHub"><span class="tip">GitHub</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+  <a href="#copy" aria-label="الأعمال"><span class="tip">الأعمال</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></a>
+  <a href="#top" aria-label="للأعلى"><span class="tip">للأعلى</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+</div>
+<div class="toast" id="toast">تم نسخ الإيميل</div>
+
+<div class="lb" id="lb"><img alt=""><p></p></div>
+
+<script>
+// hook filters
+document.querySelectorAll('#hookFilters button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#hookFilters button').forEach(x=>x.classList.toggle('on',x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll('#hooks .hook').forEach(h=>h.classList.toggle('hide',f!=='all'&&h.dataset.k!==f));
+});
+// skill tabs
+document.querySelectorAll('#skillTabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#skillTabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.dataset.p===b.dataset.t));
+});
+// lightbox
+const lb=document.getElementById('lb');
+document.querySelectorAll('.shot').forEach(s=>s.onclick=()=>{
+  lb.querySelector('img').src=s.querySelector('img').src;
+  lb.querySelector('p').textContent=s.dataset.cap||'';
+  lb.classList.add('on');
+});
+lb.onclick=()=>lb.classList.remove('on');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+// copy email
+document.getElementById('copyMail').onclick=async()=>{
+  try{await navigator.clipboard.writeText('ipabdullah2@gmail.com');}catch(e){location.href='mailto:ipabdullah2@gmail.com';return}
+  const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600);
+};
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
