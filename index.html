@@ -176,6 +176,14 @@ section.wrap{padding-top:110px;padding-bottom:10px;scroll-margin-top:0}
 .fit-head{background:var(--ink);color:#fff;font-weight:700}
 .fit-head > div{background:var(--ink)!important;color:#fff!important;border-color:#2a2a2a!important}
 
+/* organic views */
+.views-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.phone{background:var(--bg-soft);border:1px solid var(--line);border-radius:28px;padding:12px 12px 0;box-shadow:var(--shadow);overflow:hidden}
+.phone img{border-radius:18px;border:1px solid var(--line);aspect-ratio:923/1500;object-fit:cover;object-position:top;width:100%}
+.phone figcaption{font-size:14px;color:var(--muted);text-align:center;padding:10px 0 12px}
+.sub-h{font-size:26px;font-weight:900;margin-top:48px}
+
 /* about / skills */
 .about{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:36px}
 .about .card{padding:28px}
@@ -236,7 +244,8 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
   body{font-size:16px}
   .wrap{padding:0 16px}
   .hero{padding-top:120px}
-  .grid2,.grid3
+  .grid2,.grid3,.views-kpis{grid-template-columns:1fr}
+  .phones{grid-template-columns:1fr 1fr}
   .span2{grid-column:auto}
   .kpis{grid-template-columns:1fr 1fr 1fr}
   .kpi b{font-size:19px}
@@ -282,7 +291,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
   <div class="stats">
     <div class="stat hl rv"><b><i>−31%</i></b><span>تكلفة الشراء في الحملة المبنية على سكربتي مقارنة بمتوسط الحساب</span></div>
     <div class="stat rv"><b>37.5K <small>SAR</small></b><span>مبيعات متجر منتجات رقمية على سلة خلال سنة</span></div>
-    <div class="stat rv"><b>1M+</b><span>ظهور على TikTok Ads بنسبة نقر <span class="ltr">3.22%</span></span></div>
+    <div class="stat rv"><b>7.2M+</b><span>مشاهدة عضوية على تيك توك وإنستقرام بدون صرف إعلاني</span></div>
     <div class="stat rv"><b>240</b><span>تسجيلاً في يومين من محتوى عضوي فقط بدون ريال إعلانات</span></div>
   </div>
 </header>
@@ -416,10 +425,33 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
 <!-- ============ ORGANIC ============ -->
 <section id="content" class="wrap">
   <span class="role-tag"><i>+</i> صناعة المحتوى</span>
-  <p class="eyebrow">Organic Content & Launches</p>
-  <h2 class="h2">محتوى جاب عملاء حقيقيين</h2>
-  <p class="h2-sub">أطلقت منتجاتي بنفسي، وكان المحتوى هو قناة النمو الأولى.</p>
-  <div class="grid3">
+  <p class="eyebrow">Organic Content</p>
+  <h2 class="h2">أكثر من 7 ملايين مشاهدة عضوية</h2>
+  <p class="h2-sub">محتوى كتبته وأنتجته ونشرته على تيك توك وإنستقرام بدون أي صرف إعلاني. اللقطات مأخوذة مباشرة من لوحات التحليلات في التطبيقين.</p>
+
+  <div class="views-kpis">
+    <div class="stat hl rv"><b><i>6.8M</i></b><span>مشاهدة على تيك توك خلال سنة، 88% منها من صفحة For You</span></div>
+    <div class="stat rv"><b>139K</b><span>إعجاب و10.6 ألف مشاركة على تيك توك</span></div>
+    <div class="stat rv"><b>386K</b><span>مشاهدة على إنستقرام في آخر 90 يوماً، 42% منها من غير المتابعين</span></div>
+  </div>
+
+  <div class="phones">
+    <figure class="phone rv shot" data-cap="TikTok Analytics: 6.8 مليون مشاهدة، نوفمبر 2025 إلى نوفمبر 2026">
+      <img src="img/tiktok-365d.png" alt="تحليلات تيك توك: 6.8 مليون مشاهدة خلال سنة" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      <figcaption>TikTok · 365 يوماً</figcaption>
+    </figure>
+    <figure class="phone rv shot" data-cap="Instagram Insights: 386 ألف مشاهدة في آخر 90 يوماً">
+      <img src="img/instagram-90d.png" alt="تحليلات إنستقرام: 386 ألف مشاهدة" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      <figcaption>Instagram · 90 يوماً</figcaption>
+    </figure>
+    <figure class="phone rv shot" data-cap="TikTok Analytics: 170.8 ألف مشاهدة، أبريل إلى سبتمبر 2026">
+      <img src="img/tiktok-apr-sep.png" alt="تحليلات تيك توك: 170.8 ألف مشاهدة" loading="lazy"><span class="zoom">اضغط للتكبير</span>
+      <figcaption>TikTok · أبريل إلى سبتمبر</figcaption>
+    </figure>
+  </div>
+
+  <h3 class="sub-h">ومحتوى جاب عملاء حقيقيين</h3>
+  <div class="grid3" style="margin-top:16px">
     <div class="stat rv"><b>240</b><span>تسجيلاً في جامعتي من يومين محتوى عضوي على تيك توك وسناب، بدون أي صرف إعلاني</span></div>
     <div class="stat rv"><b>73</b><span>مستخدماً نشطاً أسبوعياً بعد الإطلاق مباشرة</span></div>
     <div class="stat hl rv"><b><i>25</i></b><span>عميلاً دافعاً لناشر خلال أسبوعين من إعلانات تيك توك</span></div>
