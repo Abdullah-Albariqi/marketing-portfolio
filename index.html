@@ -119,22 +119,8 @@ section.wrap{padding-top:110px;padding-bottom:10px;scroll-margin-top:0}
 .bar-row.me .fill{background:var(--accent)}
 .bar-row b{direction:ltr;text-align:left;font-weight:700}
 
-/* hooks wall */
-.hooks-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px;margin-top:60px}
-.hooks-head h3{font-size:28px;font-weight:900}
-.filters{display:flex;flex-wrap:wrap;gap:6px}
-.filters button{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-2);background:#fff;cursor:pointer;color:var(--ink-2)}
-.filters button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.hooks{columns:3 280px;column-gap:12px;margin-top:20px}
-.hook{break-inside:avoid;margin-bottom:12px;border:1px solid var(--line);border-radius:18px;padding:18px 18px 14px;background:#fff;transition:.2s}
-.hook:hover{border-color:var(--ink);transform:translateY(-2px)}
-.hook p{font-size:19px;font-weight:700;line-height:1.55}
-.hook small{display:flex;justify-content:space-between;margin-top:10px;color:var(--muted);font-size:13px}
-.hook small b{color:var(--accent-ink);font-weight:500}
-.hook.hide{display:none}
-
 /* script anatomy */
-.anatomy{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;margin-top:60px}
+.anatomy{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;margin-top:16px}
 .anatomy .card{padding:28px}
 .anatomy h3{font-size:26px;font-weight:900;margin-bottom:6px}
 .steps{list-style:none;margin-top:16px;counter-reset:s}
@@ -347,42 +333,6 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
     <div class="p rv"><span class="n">04 / Test</span><b>أختبر وأقيس</b><span>أطلق النسخ وأقارن CTR وتكلفة الشراء، وأعيد كتابة ما لا يعمل.</span></div>
   </div>
 
-  <!-- hooks wall -->
-  <div class="hooks-head">
-    <div>
-      <h3>جدار الهوكات</h3>
-      <p style="color:var(--muted)">من أكثر من 75 عنوان كاروسيل وريلز كتبتها لسلسلتين محتوى (القلق الاجتماعي، والانضباط والإنتاجية). صنّفتها حسب المعادلة.</p>
-    </div>
-    <div class="filters" id="hookFilters">
-      <button class="on" data-f="all">الكل</button>
-      <button data-f="pain">ألم مباشر</button>
-      <button data-f="curio">فضول وسر</button>
-      <button data-f="trans">تحوّل</button>
-      <button data-f="myth">كسر قناعة</button>
-      <button data-f="list">قائمة وخطوات</button>
-    </div>
-  </div>
-  <div class="hooks" id="hooks">
-    <div class="hook" data-k="pain"><p>تحس لو دخلت القاعة الكل يطالع فيك وينتقدك؟</p><small><span>كاروسيل</span><b>ألم مباشر</b></small></div>
-    <div class="hook" data-k="myth"><p>التسويف مو كسل، أنت بس تهرب من ضغط البداية!</p><small><span>كاروسيل</span><b>كسر قناعة</b></small></div>
-    <div class="hook" data-k="curio"><p>من يتكلم بطلاقة ليس أفضل منك.. هو فقط يعرف هذا السر:</p><small><span>كاروسيل</span><b>فضول وسر</b></small></div>
-    <div class="hook" data-k="trans"><p>كيف تحولت من شخص عنده رهاب اجتماعي.. إلى شخص مرتاح اجتماعياً؟</p><small><span>قصة شخصية</span><b>تحوّل</b></small></div>
-    <div class="hook" data-k="curio"><p>أشياء سببت لك الرهاب الاجتماعي وأنت ما تدري:</p><small><span>كاروسيل</span><b>فضول وسر</b></small></div>
-    <div class="hook" data-k="myth"><p>الانضباط هو اللي يحركك وليس التحفيز!</p><small><span>كاروسيل</span><b>كسر قناعة</b></small></div>
-    <div class="hook" data-k="pain"><p>ليش يضيع يومك على الجوال وأنت تبي تنجز؟</p><small><span>ريلز</span><b>ألم مباشر</b></small></div>
-    <div class="hook" data-k="list"><p>قاعدة الـ 1%: السر اللي يغير حياتك بالاستمرار</p><small><span>كاروسيل</span><b>قائمة وخطوات</b></small></div>
-    <div class="hook" data-k="trans"><p>قعدت سنين أجرب حلول، وهذا الشيء الوحيد اللي فادني مع رجفة اليد والقلق الاجتماعي.</p><small><span>قصة شخصية</span><b>تحوّل</b></small></div>
-    <div class="hook" data-k="curio"><p>كيف تستعيد تركيزك من "سجن الخوارزمية"؟</p><small><span>ريلز</span><b>فضول وسر</b></small></div>
-    <div class="hook" data-k="myth"><p>وقف كذب على نفسك بكلمة "أنتظر الوقت المناسب"!</p><small><span>كاروسيل</span><b>كسر قناعة</b></small></div>
-    <div class="hook" data-k="list"><p>إذا سويت هالشي لأسبوع.. رهابك الاجتماعي يخف بشكل كبييير!</p><small><span>تحدي</span><b>قائمة وخطوات</b></small></div>
-    <div class="hook" data-k="pain"><p>ليش تتحمس للشغل في الليل ويتغير كل شي بالصبح؟</p><small><span>ريلز</span><b>ألم مباشر</b></small></div>
-    <div class="hook" data-k="curio"><p>وش هو "وهم الانشغال"؟ وهل أنت جالس تضيع عمرك فيه وأنت ما تدري؟</p><small><span>كاروسيل</span><b>فضول وسر</b></small></div>
-    <div class="hook" data-k="myth"><p>سويت هالتمرين عشان أثبت إن الرهاب الاجتماعي ماله دخل بضعف الشخصية.</p><small><span>تجربة</span><b>كسر قناعة</b></small></div>
-    <div class="hook" data-k="list"><p>لا تروح لأي اجتماع قبل ما تتعلم هالحركة البسيطة في الذكاء الاجتماعي.</p><small><span>ريلز</span><b>قائمة وخطوات</b></small></div>
-    <div class="hook" data-k="trans"><p>كيف تتحول من شخص يتوتر من أبسط موقف.. إلى شخص هادئ وواثق؟</p><small><span>كاروسيل</span><b>تحوّل</b></small></div>
-    <div class="hook" data-k="list"><p>قاعدة اليومين: هي اللي بتحافظ على استمراريتك</p><small><span>كاروسيل</span><b>قائمة وخطوات</b></small></div>
-  </div>
-
   <!-- script anatomy -->
   <div class="anatomy">
     <div class="card rv">
@@ -585,7 +535,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
 
   <div class="fit rv">
     <div class="fit-row fit-head"><div class="need">المهمة</div><div class="proof">ما يثبتها</div></div>
-    <div class="fit-row"><div class="need">تطوير الأفكار<small>أفكار للحملات والمحتوى اليومي</small></div><div class="proof">أكثر من 75 عنوان كاروسيل وريلز لسلسلتي محتوى، وأداة <a href="#ai">إعلان</a> لاستخراج الأفكار من أنجح فيديوهات المنافسين.</div></div>
+    <div class="fit-row"><div class="need">تطوير الأفكار<small>أفكار للحملات والمحتوى اليومي</small></div><div class="proof">كتبت أكثر من 75 عنوان كاروسيل وريلز لسلسلتي محتوى، وبنيت أداة <a href="#ai">إعلان</a> لاستخراج الأفكار من أنجح فيديوهات المنافسين.</div></div>
     <div class="fit-row"><div class="need">كتابة السيناريو والنصوص<small>Copywriting وسكربتات الفيديو</small></div><div class="proof">سكربت إعلاني خفّض تكلفة الشراء 31% وجاب 43% من مشتريات الحساب. <a href="#copy">دراسة الحالة</a></div></div>
     <div class="fit-row"><div class="need">إنتاج المحتوى القصير<small>Reels و TikTok</small></div><div class="proof">أكتب وأنتج محتوى تيك توك وسناب لمنتجاتي، وأحرّر على CapCut. يومان من المحتوى جابت 240 تسجيلاً.</div></div>
     <div class="fit-row"><div class="need">إدارة المنصات<small>جدولة ونشر ومتابعة</small></div><div class="proof">بنيت أداة تكتب الكابشن وتنشر على تيك توك وإنستقرام وثريدز تلقائياً لعدة براندات.</div></div>
@@ -621,15 +571,15 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
     </div>
     <div class="card rv">
       <div class="tabs" id="skillTabs">
-        <button class="on" data-t="mk">التسويق</button>
-        <button data-t="ct">المحتوى</button>
-        <button data-t="ai">الذكاء الاصطناعي</button>
+        <button class="on" data-t="mk">التسويق بالأداء</button>
+        <button data-t="ct">صناعة المحتوى</button>
+        <button data-t="ai">الذكاء الاصطناعي والأتمتة</button>
         <button data-t="dev">التطوير</button>
       </div>
-      <div class="panel on" data-p="mk"><p>إطلاق الحملات وقياسها من أول ريال.</p><div class="chips"><span class="chip">TikTok Ads</span><span class="chip">Meta Ads</span><span class="chip">Snapchat Ads</span><span class="chip">Salla</span><span class="chip">A/B Testing</span><span class="chip">Funnels</span></div></div>
-      <div class="panel" data-p="ct"><p>من الفكرة إلى المقطع المنشور.</p><div class="chips"><span class="chip">Copywriting</span><span class="chip">سكربتات الفيديو</span><span class="chip">كاروسيل</span><span class="chip">CapCut</span><span class="chip">اللهجة السعودية</span><span class="chip">English</span></div></div>
-      <div class="panel" data-p="ai"><p>أتمتة الأعمال المتكررة وتسريع الإنتاج.</p><div class="chips"><span class="chip">Claude API</span><span class="chip">Claude Code</span><span class="chip">Gemini API</span><span class="chip">Whisper</span><span class="chip">n8n</span><span class="chip">Prompt Engineering</span></div></div>
-      <div class="panel" data-p="dev"><p>منتجات كاملة من قاعدة البيانات إلى النشر.</p><div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Next.js</span><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Supabase</span><span class="chip">Postgres</span><span class="chip">Cloudflare</span></div></div>
+      <div class="panel on" data-p="mk"><p>تخطيط الحملات المدفوعة وإدارتها وتحليل نتائجها.</p><div class="chips"><span class="chip">TikTok Ads Manager</span><span class="chip">Meta Ads Manager</span><span class="chip">Snapchat Ads Manager</span><span class="chip">A/B Testing</span><span class="chip">Conversion Funnels</span><span class="chip">Campaign Analytics</span><span class="chip">E-commerce (Salla)</span></div></div>
+      <div class="panel" data-p="ct"><p>من الفكرة والنص إلى المحتوى المنشور.</p><div class="chips"><span class="chip">Copywriting</span><span class="chip">Ad Scriptwriting</span><span class="chip">Content Strategy</span><span class="chip">Short-form Video</span><span class="chip">Social Media Management</span><span class="chip">CapCut</span></div></div>
+      <div class="panel" data-p="ai"><p>دمج النماذج اللغوية في المنتجات وأتمتة سير العمل.</p><div class="chips"><span class="chip">LLM Integration (Claude, Gemini)</span><span class="chip">Prompt Engineering</span><span class="chip">Workflow Automation (n8n)</span><span class="chip">Speech-to-Text (Whisper)</span><span class="chip">AI-Assisted Development</span></div></div>
+      <div class="panel" data-p="dev"><p>بناء منتجات كاملة من قاعدة البيانات إلى النشر.</p><div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Next.js</span><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Supabase</span><span class="chip">Postgres</span><span class="chip">Cloudflare</span></div></div>
     </div>
   </div>
 </section>
@@ -659,12 +609,6 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding-bottom:100px}
 <div class="lb" id="lb"><img alt=""><p></p></div>
 
 <script>
-// hook filters
-document.querySelectorAll('#hookFilters button').forEach(b=>b.onclick=()=>{
-  document.querySelectorAll('#hookFilters button').forEach(x=>x.classList.toggle('on',x===b));
-  const f=b.dataset.f;
-  document.querySelectorAll('#hooks .hook').forEach(h=>h.classList.toggle('hide',f!=='all'&&h.dataset.k!==f));
-});
 // skill tabs
 document.querySelectorAll('#skillTabs button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('#skillTabs button').forEach(x=>x.classList.toggle('on',x===b));
